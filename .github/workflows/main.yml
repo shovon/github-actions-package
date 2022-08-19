@@ -16,6 +16,10 @@ jobs:
           registry-uri: https://npm.pkg.github.com/
           scope: '@shovon'
       - run: npm install
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          TOKEN: ${{secrets.TOKEN}}
+          OWNER: ${{secrets.OWNER}}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
