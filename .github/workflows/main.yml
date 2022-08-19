@@ -20,7 +20,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
           TOKEN: ${{secrets.TOKEN}}
           OWNER: ${{secrets.OWNER}}
-      - run: npm publish
+      - run: echo $GITHUB_TOKEN && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
           TOKEN: ${{secrets.TOKEN}}
