@@ -17,11 +17,11 @@ jobs:
           scope: '@shovon'
       - run: npm install
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.TOKEN}}
           TOKEN: ${{secrets.TOKEN}}
           OWNER: ${{secrets.OWNER}}
       - run: echo $GITHUB_TOKEN && npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.TOKEN}}
           TOKEN: ${{secrets.TOKEN}}
           OWNER: ${{secrets.OWNER}}
