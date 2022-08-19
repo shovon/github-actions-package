@@ -19,5 +19,5 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          TOKEN: ${{env.TOKEN}}
-          OWNER: ${{env.OWNER}}
+          TOKEN: ${{secrets.TOKEN}}
+          OWNER: ${{secrets.OWNER}}
