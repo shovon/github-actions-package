@@ -20,7 +20,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.TOKEN}}
           TOKEN: ${{secrets.TOKEN}}
           OWNER: ${{secrets.OWNER}}
-      - run: echo $TOKEN && npm publish
+      - run: echo ${{secrets.TOKEN}} && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.TOKEN}}
           TOKEN: ${{secrets.TOKEN}}
